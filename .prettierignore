@@ -1,0 +1,8 @@
+node_modules
+dist
+build
+*.log
+.DS_Store
+coverage
+.nyc_output
+.vscode/settings.json
