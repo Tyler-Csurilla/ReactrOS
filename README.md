@@ -27,4 +27,4 @@ This is an experimental project and a work in progress. Features and UI are subj
 
 ---
 
-Feel free to explore, tinker, and contribute.
+Feel free to explore or contribute!
