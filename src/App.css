@@ -1,15 +1,15 @@
-.app {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --primary-color: #008080;
+  --secondary-color: #20b2aa;
+  --text-color: #ffffff;
+  --background-color: #f0f0f0;
+  --hover-color: rgba(255, 255, 255, 0.1);
+  --icon-size: 32px;
+  --icon-margin: 4px;
+  --taskbar-height: 50px;
 }
 body {
   margin: 0;
@@ -17,6 +17,15 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden;
   background: #008080;
+}
+
+.app {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #root {
   width: 100vw;
