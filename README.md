@@ -52,7 +52,7 @@ Feel free to explore or contribute!
 # 🔍 Features:
 
 
-##[ Debug Tool UI ]
+### [ Debug Tool UI ]
 
 ![til](https://github.com/Tyler-Csurilla/ReactrOS/blob/main/repo_assets/debug_demo.gif?raw=true)
 ### Debug Panels & Visualizers (WIP)
