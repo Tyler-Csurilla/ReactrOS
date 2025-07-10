@@ -44,7 +44,7 @@ A web-based desktop environment inspired by classic operating systems. Built wit
 
 ---
 
-Feel free to explore or contribute!
+**Completely open-source, feel free to use for your own projects, fork, make commits, etc.**
 
 ---
 
