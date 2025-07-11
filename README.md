@@ -1,6 +1,8 @@
-![til](./repo_assets/logo_reactros.png)
-
 # ReactrOS (Web Desktop)
+
+<p align="center">
+  <img src="./repo_assets/logo_reactros.png" alt="Sublime's custom image"/>
+</p>
 
 A web-based desktop environment inspired by classic operating systems. Built with React and TypeScript, this project provides a customizable desktop experience in your browser.
 
