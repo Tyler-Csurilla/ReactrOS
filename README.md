@@ -1,7 +1,7 @@
-# ReactrOS (Web Desktop)
+# ReactrOS
 
 <p align="center">
-  <img src="./repo_assets/logo_reactros.png" alt="Sublime's custom image"/>
+  <img src="./public/repo_assets/logo_reactros.png" alt="Sublime's custom image"/>
 </p>
 
 A web-based desktop environment inspired by classic operating systems. Built with React and TypeScript, this project provides a customizable desktop experience in your browser.
@@ -58,7 +58,7 @@ A web-based desktop environment inspired by classic operating systems. Built wit
 
 ### [ Debug Tool UI ]
 
-![til](https://github.com/Tyler-Csurilla/ReactrOS/blob/main/repo_assets/debug_demo.gif?raw=true)
+![til](https://github.com/Tyler-Csurilla/ReactrOS/blob/main/public/repo_assets/debug_demo.gif?raw=true)
 
 ### Debug Panels & Visualizers (WIP)
 
