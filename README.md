@@ -22,6 +22,7 @@ A web-based desktop environment inspired by classic operating systems. Built wit
   - All settings and data persist in your browser
 - **Built‑in Editor**
   - “Save” and edit custom desktop configurations
+- **Runnable "Executables"**
 
 ---
 
