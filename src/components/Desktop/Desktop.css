@@ -1,83 +1,198 @@
 .desktop {
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(102deg, #000000, #480909);
-  position: relative;
-  overflow: hidden;
-  position: relative;
-  width: 100vw;
-  height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(102deg, #000000, #480909);
+    position: relative;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
 }
 
 .desktop::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #e5e5f7;
-  opacity: 0.1;
-  background-image:
-    linear-gradient(
-      30deg,
-      #444cf7 12%,
-      transparent 12.5%,
-      transparent 87%,
-      #444cf7 87.5%,
-      #444cf7
-    ),
-    linear-gradient(
-      150deg,
-      #444cf7 12%,
-      transparent 12.5%,
-      transparent 87%,
-      #444cf7 87.5%,
-      #444cf7
-    ),
-    linear-gradient(
-      30deg,
-      #444cf7 12%,
-      transparent 12.5%,
-      transparent 87%,
-      #444cf7 87.5%,
-      #444cf7
-    ),
-    linear-gradient(
-      150deg,
-      #444cf7 12%,
-      transparent 12.5%,
-      transparent 87%,
-      #444cf7 87.5%,
-      #444cf7
-    ),
-    linear-gradient(
-      60deg,
-      #444cf777 25%,
-      transparent 25.5%,
-      transparent 75%,
-      #444cf777 75%,
-      #444cf777
-    ),
-    linear-gradient(
-      60deg,
-      #444cf777 25%,
-      transparent 25.5%,
-      transparent 75%,
-      #444cf777 75%,
-      #444cf777
-    );
-  background-size: 80px 140px;
-  background-position:
-    0 0,
-    0 0,
-    40px 70px,
-    40px 70px,
-    0 0,
-    40px 70px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .desktop-icons {
-  height: calc(100% - calc(var(--taskbar-height, 40px) + 40px));
-  z-index: 1;
+    position: relative;
+    height: var(--desktop-icons-height);
+    width: var(--desktop-icons-width);
+    margin-top: 0.45rem;
+    z-index: 1;
+}
+
+/* Enhanced Debug Grid Styles */
+.debug-grid-rect {
+    position: absolute;
+    border: 2px solid #00ff00;
+    background: rgba(0, 255, 0, 0.1);
+    pointer-events: all;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.debug-grid-rect:hover {
+    background: rgba(0, 255, 0, 0.2);
+    border-color: #00ff00;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    z-index: 1000;
+}
+
+.debug-grid-rect.dimmed {
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 50;
+}
+
+.debug-grid-rect.adjacent {
+    opacity: 0.6;
+    background: rgba(255, 255, 0, 0.1);
+    border-color: #ffff00;
+    z-index: 200;
+}
+
+.debug-coordinate-points {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1001;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.debug-coordinate-point {
+    position: absolute;
+    width: 8px; /* Smaller by default */
+    height: 8px; /* Smaller by default */
+    background: #ff0000;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: all;
+    transition: all 0.2s ease;
+    z-index: 1002;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    opacity: 0.6; /* Default reduced opacity */
+    transform: translate(-4px, -4px); /* Offset to keep centered for 8px size */
+}
+
+.debug-coordinate-point:hover {
+    background: #ff4444; /* Only change color, not size */
+    z-index: 1003;
+    opacity: 1; /* Full opacity when hovered */
+}
+
+/* Hide coordinate points in non-hovered rects */
+.debug-grid-rect.dimmed .debug-coordinate-point {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.debug-grid-rect.adjacent .debug-coordinate-point {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Coordinate points when rect is hovered - make them larger */
+.debug-grid-rect:hover .debug-coordinate-point {
+    width: 16px; /* Enlarged when rect is hovered */
+    height: 16px; /* Enlarged when rect is hovered */
+    background: #ff3333;
+    transform: translate(-8px, -8px); /* Adjust offset for larger size */
+    opacity: 0.8; /* Slightly more visible when rect is hovered */
+}
+
+.debug-grid-rect:hover .debug-coordinate-point:hover {
+    background: #ff0000; /* Brighter color when individually hovered */
+    opacity: 1; /* Full opacity when individually hovered */
+}
+
+.debug-coordinate-label {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1004;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.debug-coordinate-point:hover + .debug-coordinate-label,
+.debug-coordinate-point:hover ~ .debug-coordinate-label {
+    opacity: 1;
+}
+
+.debug-gap-indicator {
+    position: absolute;
+    background: rgba(255, 165, 0, 0.5);
+    pointer-events: none;
+    z-index: 99;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.debug-gap-indicator.row-gap {
+    height: 4px;
+    width: 100%;
+}
+
+.debug-gap-indicator.column-gap {
+    width: 4px;
+    height: 100%;
+}
+
+.debug-center-coordinates {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    z-index: 1005;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.debug-grid-rect:hover .debug-center-coordinates {
+    opacity: 1;
 }

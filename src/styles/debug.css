@@ -1,0 +1,106 @@
+.debug-panel {
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 12px;
+    max-width: 500px;
+    word-wrap: break-word;
+    z-index: 9999;
+}
+
+.debug-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #00ff00;
+    border-bottom: 1px solid #333;
+    padding-bottom: 3px;
+}
+
+.debug-control-panel {
+    position: fixed;
+    top: 2rem;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 12px;
+    max-width: 300px;
+    z-index: 10000;
+}
+
+.debug-control-panel.disabled-mode {
+    border: 2px solid #ff6b6b;
+}
+
+.debug-control-panel.disabled-mode .debug-groups {
+    opacity: 0.6;
+}
+
+.debug-groups {
+    margin-top: 8px;
+}
+
+.debug-group-item {
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+}
+
+.debug-group-item label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.debug-group-item input[type='checkbox'] {
+    margin-right: 8px;
+}
+
+.debug-disable-all {
+    margin-bottom: 12px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 8px;
+}
+
+.disable-all-btn {
+    background: #444;
+    color: white;
+    border: 1px solid #666;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 11px;
+    font-family: monospace;
+    transition: background-color 0.2s ease;
+    width: 100%;
+}
+
+.disable-all-btn:hover {
+    background: #555;
+}
+
+.disable-all-btn.active {
+    background: #ff6b6b;
+    border-color: #ff4757;
+}
+
+.disable-all-btn.active:hover {
+    background: #ff5252;
+}
+
+.debug-group-item input[type='checkbox']:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.debug-group-item:has(input[type='checkbox']:disabled) label {
+    opacity: 0.7;
+    cursor: not-allowed;
+}

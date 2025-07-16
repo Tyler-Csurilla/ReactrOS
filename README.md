@@ -11,17 +11,18 @@ A web-based desktop environment inspired by classic operating systems. Built wit
 ## 🚀 Features (Planned)
 
 - **Icon Grid & Layout**
-  - Drag-and‑drop icons with grid snapping
-  - Adjustable padding, row/column gaps, and icon sizing
+    - Drag-and‑drop icons with grid snapping
+    - Adjustable padding, row/column gaps, and icon sizing
 - **Window Management**
-  - Move, resize, minimize, and maximize windows
+    - Move, resize, minimize, and maximize windows
 - **Taskbar**
-  - Launch and switch between apps
+    - Launch and switch between apps
 - **Themes & Custom Layouts**
+- **Working In-Browser File-System**
 - **Local-Only Storage**
-  - All settings and data persist in your browser
+    - All settings and data persist in your browser
 - **Built‑in Editor**
-  - “Save” and edit custom desktop configurations
+    - “Save” and edit custom desktop configurations
 - **Runnable "Executables"**
 
 ---
@@ -40,11 +41,11 @@ A web-based desktop environment inspired by classic operating systems. Built wit
 
 1. Clone the repo
 
-   ```bash
-   git clone https://github.com/Tyler-Csurilla/ReactrOS.git
-   cd ReactrOS
+    ```bash
+    git clone https://github.com/Tyler-Csurilla/ReactrOS.git
+    cd ReactrOS
 
-   ```
+    ```
 
 2. Install dependencies: `pnpm install`
 3. Start the dev server: `pnpm dev`
@@ -65,13 +66,13 @@ A web-based desktop environment inspired by classic operating systems. Built wit
 
 - **Icon Grid Visualizer**
   Instantly inspect every desktop icon’s layout in real time:
-  - See exact X/Y coordinates for icon placement
-  - Monitor live layout parameters: padding, row gap, column gap, icon size
+    - See exact X/Y coordinates for icon placement
+    - Monitor live layout parameters: padding, row gap, column gap, icon size
 
 - **Context Data Inspector**
   Browse client‑side session data at a glance:
-  - View current theme and background‑manager settings
-  - List all desktop icons and their metadata
-  - Drill into any other in‑memory state for faster debugging
+    - View current theme and background‑manager settings
+    - List all desktop icons and their metadata
+    - Drill into any other in‑memory state for faster debugging
 
 > These tools update dynamically as you tweak your configuration, providing immediate feedback on how layout and data changes affect the desktop.

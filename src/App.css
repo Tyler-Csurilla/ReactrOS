@@ -1,35 +1,67 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  --primary-color: #008080;
-  --secondary-color: #20b2aa;
-  --text-color: #ffffff;
-  --background-color: #f0f0f0;
-  --hover-color: rgba(255, 255, 255, 0.1);
-  --icon-size: 32px;
-  --icon-margin: 4px;
-  --taskbar-height: 50px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --primary-color: #008080;
+    --secondary-color: #20b2aa;
+    --text-color: #ffffff;
+    --background-color: #f0f0f0;
+    --hover-color: rgba(255, 255, 255, 0.1);
+
+    --desktop-row-gap: 30px;
+    --desktop-column-gap: 4px;
+    --taskbar-height: 50px;
+
+    /* Desktop icon dimensions - rectangular like Windows */
+    --icon-height: 100px;
+    --icon-width: 80px;
+    /* Icon content area (for images/icons, excluding text) */
+    --icon-content-height: 60px;
+    --desktop-icon-hover-bg-color: rgba(198, 251, 255, 0.144);
+
+    /* Desktop Icon Theme Colors */
+    --accent-light: #6b7280;
+    --accent-medium: #4b5563;
+    --accent-dark: #374151;
+    --selection-bg: rgba(107, 114, 128, 0.3);
+    --selection-border: #6b7280;
+
+    /* Icon interaction states */
+    --icon-hover-bg: rgba(255, 255, 255, 0.15);
+    --icon-selected-bg: var(--selection-bg);
+    --icon-selected-border: var(--selection-border);
+    --icon-focus-glow: rgba(107, 114, 128, 0.5);
+    --icon-active-bg: rgba(107, 114, 128, 0.4);
+
+    /* Text styling */
+    --icon-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    --icon-text-color: #ffffff;
+
+    /* Allowable space for icons to be placed */
+    --desktop-icons-height: calc(
+        100vh - calc(var(--taskbar-height) + calc(var(--icon-height) / 2.5))
+    );
+    --desktop-icons-width: calc(100vw - 1rem);
 }
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  overflow: hidden;
-  background: #008080;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    background: #008080;
 }
 
 .app {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #root {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
