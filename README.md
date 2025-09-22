@@ -5,7 +5,7 @@
 > This project is no longer actively maintained. There will be no further updates or changes. It remains available as a prototyping example that may still function.
 
 <p align="center">
-  ![ReactrOS Logo](./public/repo_assets/logo_reactros.png)
+  <img src="./public/repo_assets/logo_reactros.png" alt="ReactrOS Logo"/>
 </p>
 
 A prototyping project demonstrating a web-based desktop environment inspired by classic operating systems. Built with React and TypeScript, it provides a basic customizable desktop experience in your browser.
