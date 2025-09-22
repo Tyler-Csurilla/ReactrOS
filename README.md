@@ -1,36 +1,21 @@
 # ReactrOS
 
+> **Deprecated Project Notice**
+>
+> This project is no longer actively maintained. There will be no further updates or changes. It remains available as a prototyping example that may still function.
+
 <p align="center">
-  <img src="./public/repo_assets/logo_reactros.png" alt="Sublime's custom image"/>
+  ![ReactrOS Logo](./public/repo_assets/logo_reactros.png)
 </p>
 
-A web-based desktop environment inspired by classic operating systems. Built with React and TypeScript, this project provides a customizable desktop experience in your browser.
-
----
-
-## 🚀 Features (Planned)
-
-- **Icon Grid & Layout**
-    - Drag-and‑drop icons with grid snapping
-    - Adjustable padding, row/column gaps, and icon sizing
-- **Window Management**
-    - Move, resize, minimize, and maximize windows
-- **Taskbar**
-    - Launch and switch between apps
-- **Themes & Custom Layouts**
-- **Working In-Browser File-System**
-- **Local-Only Storage**
-    - All settings and data persist in your browser
-- **Built‑in Editor**
-    - “Save” and edit custom desktop configurations
-- **Runnable "Executables"**
+A prototyping project demonstrating a web-based desktop environment inspired by classic operating systems. Built with React and TypeScript, it provides a basic customizable desktop experience in your browser.
 
 ---
 
 ## Status
 
-> **Experimental & WIP**
-> Features and UI are under active development. Some components may not yet be fully functional.
+> **Deprecated**
+> This project is deprecated and no longer maintained. It may still work but expect no further development.
 
 ## 🧰 Tech Stack
 
@@ -56,13 +41,13 @@ A web-based desktop environment inspired by classic operating systems. Built wit
 
 ---
 
-# 🔍 Features:
+## 🔍 What Was Tested
 
-### [ Debug Tool UI ]
+### Debug Tool UI
 
 ![til](https://github.com/Tyler-Csurilla/ReactrOS/blob/main/public/repo_assets/debug_demo.gif?raw=true)
 
-### Debug Panels & Visualizers (WIP)
+### Debug Panels & Visualizers
 
 - **Icon Grid Visualizer**
   Instantly inspect every desktop icon’s layout in real time:
